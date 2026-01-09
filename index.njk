@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+title: My Rad Nunjucks Blog Post
+---
+<div class="">
+    <h2>
+        Posts
+    </h2>
+    <ul>
+        {%- for post in collections.sortedpost -%}
+            <li>
+                <a href="{{ post.url }}">
+                    <span>{{ post.data.date.getFullYear() }}-{{ post.data.date.getMonth() + 1 }}-{{ post.date.getDate()}} </span>
+                    <span>{{ post.data.title }}</span>
+                </a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>
