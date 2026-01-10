@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "preset-ja-spacing": true,
+    "preset-ja-technical-writing": {
+      "max-kanji-continuous-len": {
+        "max": 6,
+        "allow": [
+          "応用情報技術者試験"
+        ]
+      },
+      "ja-no-weak-phrase": false
+    },
+    "no-mixed-zenkaku-and-hankaku-alphabet": true
+  }
+}
