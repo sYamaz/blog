@@ -40,9 +40,14 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  height: 100%;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  min-height: 100svh; /* 対応ブラウザ用 */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
