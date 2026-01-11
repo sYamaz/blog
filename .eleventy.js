@@ -1,5 +1,7 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/styles");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/avater-ogp.jpg");
   eleventyConfig.addPassthroughCopy("src/posts/**/img");
   eleventyConfig.addGlobalData("year", () => {
     return new Date().getFullYear();
