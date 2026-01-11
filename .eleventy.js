@@ -1,6 +1,6 @@
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("styles");
-  eleventyConfig.addPassthroughCopy("posts/**/img");
+  eleventyConfig.addPassthroughCopy("src/styles");
+  eleventyConfig.addPassthroughCopy("src/posts/**/img");
   eleventyConfig.addGlobalData("year", () => {
     return new Date().getFullYear();
   });
@@ -32,7 +32,7 @@ export default function (eleventyConfig) {
   
   return {
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       output: "_site"
     }

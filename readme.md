@@ -6,14 +6,16 @@
 
 ```
 $PROJECT_ROOT
-│   # レイアウト定義
-├── _includes
-│   # postsの記事が参照する画像置き場
-├── img
-│   # markdown記事
-├── posts
-│   # css
-└── styles
+├── src/
+│   ├── _includes/       # レイアウト定義
+│   ├── posts/           # markdown記事
+│   │   └── {slug}/img/  # 記事の画像置き場
+│   ├── styles/          # css
+│   └── index.njk        # ホームページ
+├── .github/
+│   ├── copilot-instructions.md
+│   └── agents/          # レビューエージェント
+└── package.json
 ```
 
 ## post(markdown)の書き方
