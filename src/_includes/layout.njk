@@ -2,7 +2,11 @@
   description
   or (content | excerpt(140))
 %}
-
+{% set isPost = tags and ("post" in tags) %}
+{% set ogType = "website" %}
+{% if isPost %}
+  {% set ogType = "article" %}
+{% endif %}
 <!doctype html>
 <html>
   <head>
@@ -10,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <!-- OGP -->
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="{{ ogType }}" />  
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ ogDescription }}" />
     <meta property="og:url" content="{{ page.url | url }}" />
@@ -19,9 +23,8 @@
     <!-- X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ title }}" />
-    <meta name="twitter:description" content="{{ description }}" />
-    <meta name="twitter:image" content="https://blog.shunyamazaki.com/avater-ogp.jpg" />
     <meta name="twitter:description" content="{{ ogDescription }}" />
+    <meta name="twitter:image" content="https://blog.shunyamazaki.com/avater-ogp.jpg" />
 
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/custom.css" />
