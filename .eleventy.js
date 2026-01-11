@@ -13,11 +13,12 @@ export default function (eleventyConfig) {
   // descriptionの作成
   eleventyConfig.addFilter("excerpt", (content, length = 140) => {
     if (!content) return "";
-
-    // HTMLタグを除去
-    const text = content.replace(/<[^>]*>/g, "");
-
-    // 先頭N文字
+  
+    const text = content
+      .replace(/<[^>]*>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  
     return text.length > length
       ? text.slice(0, length) + "…"
       : text;
