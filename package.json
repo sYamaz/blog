@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
-    "textlint": "textlint \"posts/**/*.md\""
+    "textlint": "textlint \"src/posts/**/*.md\""
   },
   "keywords": [],
   "author": "",
