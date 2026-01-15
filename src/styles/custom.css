@@ -24,11 +24,14 @@ body {
   background: var(--bg);
   color: var(--text-main);
   font-family:
-    Georgia,
-    "Times New Roman",
     "Noto Serif JP",
+    "Times New Roman",
     serif;
   line-height: 1.8;
+}
+
+.post-date {
+  font-family: 'Georgia', serif;
 }
 
 /* =========================

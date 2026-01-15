@@ -9,7 +9,7 @@ description: ソフトウェアエンジニア。日常や思考を綴ります�
         <a href="{{ post.url }}">
             <h2>{{ post.data.title }}</h2>
             <p>{{ post.templateContent | excerpt(70) }}</p>
-            <time>{{ post.data.date | date }}</time>
+            <time class="post-date">{{ post.data.date | date }}</time>
         </a>
     </article>
   {%- endfor -%}
