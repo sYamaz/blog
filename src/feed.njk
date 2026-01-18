@@ -1,0 +1,26 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>コードと余白</title>
+  <subtitle>あるソフトウェアエンジニアの日常と思考</subtitle>
+  <link href="https://blog.shunyamazaki.com/feed.xml" rel="self"/>
+  <link href="https://blog.shunyamazaki.com/"/>
+  <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://blog.shunyamazaki.com/</id>
+  <author>
+    <name>Shun Yamazaki</name>
+  </author>
+  {%- for post in collections.post | reverse %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl("https://blog.shunyamazaki.com") }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
