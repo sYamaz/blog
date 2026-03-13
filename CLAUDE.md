@@ -36,6 +36,17 @@ layout: post
 - **画像**: `src/posts/{post-slug}/img/`に配置し、ローカル参照：`![alt text](./img/filename.png)`
 - **テキストlintルール**（`.textlintrc`）: 日本語スペーシングプリセット有効。漢字連続最大6文字（例外：「応用情報技術者試験」）。
 
+## Branch Naming Conventions
+
+`{type}/{説明}` の形式。説明部分はケバブケース（ハイフン区切り）。
+
+| プレフィックス | 用途 | 例 |
+|---|---|---|
+| `feat/` | 新機能・新記事追加 | `feat/post-2026-02-08`, `feat/rss` |
+| `fix/` | バグ修正 | `fix/ogp-image-path` |
+| `docs/` | ドキュメント変更 | `docs/new-claude_md` |
+| `draft/` | 下書き・WIP記事 | `draft/2026-01-18` |
+
 ## Development Workflows
 
 - **ローカル開発**: `npm run dev` - `http://localhost:8080`でライブリロード付きウォッチモード起動
