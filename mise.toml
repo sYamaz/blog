@@ -1,0 +1,10 @@
+[tools]
+node = "24"
+
+[tasks.edit]
+description = "ファイルをエディタで開く"
+run = "hx $@"
+
+[tasks.new]
+description = "新規記事の雛形を作成"
+run = ".mise/tasks/new-post.sh"
