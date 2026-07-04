@@ -2,32 +2,16 @@
    Base
 ========================= */
 
-:root {
-  --text-main: #1a1a1a;
-  --text-sub: #6b6b6b;
-  --border-light: #e6e6e6;
-  --bg: #ffffff;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
   font-size: 16px;
 }
 
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text-main);
-  font-family:
-    "Noto Serif JP",
-    "Times New Roman",
-    serif;
-  line-height: 1.8;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: var(--leading-body);
 }
 
 .post-date {
@@ -39,18 +23,14 @@ body {
 ========================= */
 
 main {
-  max-width: 680px;
-  margin: 4rem auto 6rem;
+  max-width: var(--measure);
+  margin: var(--space-7) auto var(--space-8);
   padding: 0 1.25rem;
 }
 
 header {
-    padding: 0px 16px;
-}
-
-header {
-    border-bottom: 1px solid;
-    border-color: var(--border-light);
+  padding: var(--space-3) 1.25rem;
+  border-bottom: 1px solid var(--line);
 }
 
 /* =========================
@@ -71,9 +51,8 @@ a:hover {
 ========================= */
 
 article {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  border-bottom: 1px solid var(--border-light);
+  margin: var(--space-5) 0;
+  border-bottom: 1px solid var(--line);
 }
 
 article:last-child {
@@ -83,18 +62,18 @@ article:last-child {
 
 article h1,
 article h2 {
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
 }
 
 article h1 {
   font-size: 2.25rem;
-  margin: 0 0 1rem;
+  margin: 0 0 var(--space-3);
 }
 
 article h2 {
   font-size: 1.4rem;
-  margin: 0 0 0.5rem;
+  margin: 0 0 var(--space-1);
 }
 
 /* =========================
@@ -103,9 +82,9 @@ article h2 {
 
 time {
   display: block;
-  font-size: 0.9rem;
-  color: var(--text-sub);
-  margin-bottom: 1.5rem;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  margin-bottom: var(--space-4);
 }
 
 /* =========================
@@ -113,9 +92,9 @@ time {
 ========================= */
 
 article > p {
-  margin: 0.75rem 0 0;
-  color: var(--text-sub);
-  font-size: 1rem;
+  margin: var(--space-2) 0 0;
+  color: var(--ink-muted);
+  font-size: var(--text-base);
 }
 
 /* =========================
@@ -123,40 +102,40 @@ article > p {
 ========================= */
 
 article p {
-  margin: 1.6rem 0;
+  margin: var(--space-4) 0;
 }
 
 article ul,
 article ol {
-  padding-left: 1.5rem;
-  margin: 1.6rem 0;
+  padding-left: var(--space-4);
+  margin: var(--space-4) 0;
 }
 
 article li {
-  margin: 0.5rem 0;
+  margin: var(--space-1) 0;
 }
 
 article blockquote {
-  margin: 2rem 0;
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--border-light);
-  color: var(--text-sub);
+  margin: var(--space-5) 0;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--line);
+  color: var(--ink-muted);
 }
 
 article code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 0.9em;
-  background: #f6f6f6;
+  background: var(--paper-alt);
   padding: 0.15em 0.35em;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 article pre {
-  background: #f6f6f6;
-  padding: 1.25rem;
+  background: var(--paper-alt);
+  padding: var(--space-4);
   overflow-x: auto;
-  border-radius: 6px;
-  margin: 2rem 0;
+  border-radius: var(--radius);
+  margin: var(--space-5) 0;
 }
 
 article pre code {
@@ -177,12 +156,12 @@ article pre code {
 }
 
 .post-footer {
-  margin-top: 4rem;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-  color: #666;
+  margin-top: var(--space-7);
+  padding-bottom: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
 }
 
 .post-footer a {
@@ -197,8 +176,8 @@ article pre code {
 article img {
   max-width: 100%;
   display: block;
-  margin: 2.5rem auto;
-  border-radius: 6px;
+  margin: var(--space-6) auto;
+  border-radius: var(--radius);
 }
 
 /* =========================
@@ -207,8 +186,8 @@ article img {
 
 article hr {
   border: none;
-  border-top: 1px solid var(--border-light);
-  margin: 3rem 0;
+  border-top: 1px solid var(--line);
+  margin: var(--space-6) 0;
 }
 
 /* =========================
@@ -217,7 +196,7 @@ article hr {
 
 @media (max-width: 600px) {
   main {
-    margin-top: 2.5rem;
+    margin-top: var(--space-6);
   }
 
   article h1 {

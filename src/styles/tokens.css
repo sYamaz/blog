@@ -1,0 +1,46 @@
+/* =========================================================
+   Design tokens — 「コードと余白」
+   完全モノクロ / 全面セリフ / 余白を主役に
+   ========================================================= */
+:root {
+  /* Color（純黒・純白を避けた柔らかいモノクロ 4+1 色） */
+  --paper: #ffffff; /* 背景 */
+  --paper-alt: #f6f6f6; /* 画像プレースホルダ等のごく薄い地 */
+  --ink: #1a1a1a; /* 本文・見出し */
+  --ink-muted: #6b6b6b; /* 補助テキスト・メタ */
+  --line: #e6e6e6; /* hairline 罫線 */
+
+  /* Type */
+  --font-serif: "Noto Serif JP", "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, "Noto Sans Mono", monospace;
+
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-display: clamp(2.25rem, 6vw, 3rem);
+
+  --leading-body: 1.8;
+  --leading-tight: 1.3;
+  --tracking-tight: -0.01em;
+  --tracking-label: 0.08em;
+
+  /* Space（rem スケール） */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+
+  /* Layout / misc */
+  --measure: 680px; /* 読みやすい行長 */
+  --radius-sm: 4px;
+  --radius: 6px;
+  --dur: 240ms;
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
